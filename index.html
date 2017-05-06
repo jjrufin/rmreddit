@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+  <head>
+    <meta charset="utf-8">
+    <title>Rich Man's Reddit</title>
+  </head>
+  <body ng-controller="redditCtrl">
+
+    <reddit-post ng-repeat="post in posts"></reddit-post>
+    <div ng-repeat="post in posts">
+      <h2>{{ post.data.title }}</h2>
+      <h3>{{ post.data.author}}</h3>
+      <h4><img src="{{ post.data.url }}"/></h4>
+    </div>
+
+{{ test }}
+
+
+    <script src="lib/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/redditCtrl.js"></script>
+    <script src="myservice.js"></script>
+    <script src="myDirective.js"></script>
+  </body>
+</html>
