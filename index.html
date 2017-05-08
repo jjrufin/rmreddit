@@ -3,17 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Rich Man's Reddit</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body ng-controller="redditCtrl">
-
+    <h1>Reddit</h1>
     <reddit-post ng-repeat="post in posts"></reddit-post>
     <div ng-repeat="post in posts">
       <h2>{{ post.data.title }}</h2>
-      <h3>{{ post.data.author}}</h3>
-      <h4><img src="{{ post.data.url }}"/></h4>
+      <p>{{ post.data.author}}</p>
+      <p><a href="https://www.reddit.com/{{ post.data.permalink }}"><img src="{{ post.data.url }}"/></a></p>
     </div>
-
-{{ test }}
 
 
     <script src="lib/angular.min.js"></script>

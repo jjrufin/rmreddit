@@ -5,7 +5,7 @@ console.log('service check');
 
 var obj = {};
 obj.getData = function () {
-  return $http.get('http://www.reddit.com/r/aww.json');
+  return $http.get('https://www.reddit.com/r/EarthPorn.json');
   }
   return obj;
 
